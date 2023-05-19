@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Local Storage</h1>
+</body>
+</html>
+
+<script>
+  console.log('hello', localStorage)
+  const user = {
+    name: 'Nigar',
+    age: 15
+  }
+
+  console.log('user:', typeof user);
+
+  // locala elave etmek ucun
+  localStorage.setItem('data', 'Pisik')
+  localStorage.setItem('num', 14)
+  localStorage.setItem('user', JSON.stringify(user))
+
+  console.log(typeof localStorage.getItem('num'))
+  console.log(user);
+  const userLocal = localStorage.getItem('user')
+  const newUser = JSON.parse(userLocal)
+  console.log(userLocal, newUser);
+
+  var name = 'Fatima'
+  var age = 15
+
+
+  var user1 = {
+    name, age
+  }
+  console.log(user1);
+
+  // 1. datalari userden gotur
+  // 2. datalari user obyektinde saxlayin
+  // 3. user obyektin local storage-e elave edin;
+  // 4. yeni sehifede local storage-deki user datalarin cagirin
+  // 5. yeni sehifede hemin datalari gosterin;
+  // !!! sehife yenilenende datalar silinmemelidi
+
+</script>
